@@ -1,0 +1,11 @@
+{
+  "predef": [
+    "angular",
+    "require",
+    "module",
+    "process",
+    "setTimeout",
+    "__dirname",
+    "console"
+  ]
+}

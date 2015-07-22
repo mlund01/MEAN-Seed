@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head lang="en">
+        <meta charset="utf-8">
+        <meta name="viewport">
+        <title ng-bind="title"></title>
+        <base href="/">
+
+        <!-- bower:css -->
+        <link rel="stylesheet" href="/foundation/css/foundation.css" />
+        <!-- endbower -->
+
+        <!-- inject:css -->
+        <link rel="stylesheet" href="/styles/app.css">
+        <!-- endinject -->
+
+    </head>
+    <body>
+
+        <div ui-view></div>
+
+        <!-- bower:js -->
+        <script src="/angular/angular.js"></script>
+        <script src="/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="/gsap/src/uncompressed/TweenMax.js"></script>
+        <script src="/jquery/dist/jquery.js"></script>
+        <script src="/modernizr/modernizr.js"></script>
+        <script src="/fastclick/lib/fastclick.js"></script>
+        <script src="/jquery.cookie/jquery.cookie.js"></script>
+        <script src="/jquery-placeholder/jquery.placeholder.js"></script>
+        <script src="/foundation/js/foundation.js"></script>
+        <!-- endbower -->
+
+        <!-- inject:js -->
+        <script src="/app/home/js/home.module.js"></script>
+        <script src="/app/home/js/home.config.js"></script>
+        <script src="/app/base/js/base.module.js"></script>
+        <script src="/app/base/js/base.config.js"></script>
+        <script src="/app/app.module.js"></script>
+        <script src="/app/app.config.js"></script>
+        <!-- endinject -->
+
+    </body>
+</html>

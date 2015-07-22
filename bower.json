@@ -1,0 +1,29 @@
+{
+  "name": "MEAN-Seed",
+  "version": "0.0.0",
+  "description": "MEAN application seed with gulp build file",
+  "main": "app/app.module.js",
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "authors": [
+    "Connor O'Brien"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/cobrienJS/MEAN-Seed",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.2",
+    "angular-ui-router": "~0.2.15",
+    "gsap": "~1.17.0",
+    "foundation": "~5.5.2"
+  }
+}
