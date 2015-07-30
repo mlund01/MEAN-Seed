@@ -7,8 +7,8 @@ module.exports = {
         rootPath: rootPath,
         port: process.env.PORT || 3030
     },
-    prod: {
-        db: 'mongodb://cobrien:mean-seed@ds047622.mongolab.com:47622/mean-seed',
+    build: {
+        db: 'mongodb://cobrien:meanseed@ds031947.mongolab.com:31947/mean-seed',
         rootPath: rootPath,
         port: process.env.PORT || 80
     }

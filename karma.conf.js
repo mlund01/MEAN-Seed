@@ -2,8 +2,9 @@
 // Generated on Sun Jul 12 2015 22:59:45 GMT-0500 (Central Daylight Time)
 
 module.exports = function(config) {
-  config.set({
+    var mainBowerFiles = require('main-bower-files');
 
+  config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
@@ -14,9 +15,11 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
-    files: [
-      'src/**/*.js'
-    ],
+    files: [].concat(
+      mainBowerFiles({filter: '**/*.js'}),
+      './src/**/*.module.js',
+      './src/**/*.js'
+    ),
 
 
     // list of files to exclude

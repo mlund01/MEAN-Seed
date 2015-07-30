@@ -1,7 +1,13 @@
-sidebar-left {
-    background-color: aquamarine;
+@import '../../../styles/globals';
+
+.md-sidenav-left {
+    background-color: $theme-blue;
+}
+
+md-toolbar {
+    background-color: orange;
 }
 
 h1 {
-    color: yellow;
+    text-transform: uppercase;
 }

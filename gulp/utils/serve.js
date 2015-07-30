@@ -22,7 +22,8 @@
                 scroll: true
             },
             injectChanges: true,
-            logFileChanges: true
+            logFileChanges: true,
+            logPrefix: 'MEAN-Seed'
         });
     }
 
@@ -40,9 +41,10 @@
             log('*** NODEMON STARTED ***');
             startBrowerSync();
         })
-        .on('restart', function(env) {
+        .on('restart', ['vet'], function(env) {
             log('*** NODEMON RESTARTED ***');
             log('*** FILES CHANGED ON RESTART: ***\n' + env);
+            log('FILES CHANGED:\n' + env);
             setTimeout(function() {
                 browserSync.notify('*** RELOADING NOW ***');
                 browserSync.reload({stream: false});

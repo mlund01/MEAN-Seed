@@ -14,7 +14,7 @@
             .src(config.allJS)
             .pipe(jshint())
             .pipe(jscs())
-            .pipe(jshint.reporter('jshint-stylish'))
+            .pipe(jshint.reporter('jshint-stylish', {verbose: true}))
             .pipe(jshint.reporter('fail'));
     });
 

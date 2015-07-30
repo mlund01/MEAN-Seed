@@ -4,13 +4,12 @@ module.exports = function(app) {
         res.send(404);
     });
 
-    app.get('/app/*', function(req, res) {
-        console.log('TEST App');
-        res.render('app/' + req.params[0]);
+    app.get('/partials/*', function(req, res) {
+        res.render('../../src/app/' + req.params[0]);
     });
 
     app.get('*', function(req, res) {
-        res.render('index', {title: 'ejs'});
+        res.render('index');
     });
 
 };

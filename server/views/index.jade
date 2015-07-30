@@ -1,0 +1,14 @@
+doctype
+html(ng-app="app")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title(ng-bind="title")
+        base(href="/")
+
+        include ../includes/stylesheets
+
+    body(layout="row", ui-view)
+
+        include ../includes/scripts
+

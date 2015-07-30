@@ -6,6 +6,10 @@
     "process",
     "setTimeout",
     "__dirname",
-    "console"
+    "console",
+    "describe",
+    "it",
+    "beforeEach",
+    "expect"
   ]
 }

@@ -7,19 +7,19 @@
             url: '',
             views: {
                 '': {
-                    templateUrl: 'app/base/templates/base.html'
+                    templateUrl: '/partials/base/templates/base'
                 },
                 'top@base': {
-                    templateUrl: 'app/base/templates/base.top.html'
+                    templateUrl: '/partials/base/templates/base-top'
                 },
                 'right@base': {
-                    templateUrl: 'app/base/templates/base.right.html'
+                    templateUrl: '/partials/base/templates/base-right'
                 },
                 'bottom@base': {
-                    templateUrl: 'app/base/templates/base.bottom.html'
+                    templateUrl: '/partials/base/templates/base-bottom'
                 },
                 'left@base': {
-                    templateUrl: 'app/base/templates/base.left.html'
+                    templateUrl: '/partials/base/templates/base-left'
                 }
             }
         });

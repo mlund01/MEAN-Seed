@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     mainBowerFiles = require('main-bower-files'),
     uglify = require('gulp-uglify');
 
-gulp.task('bower-files', ['clean-lib'], function() {
+gulp.task('bower-files', ['clean-bower'], function() {
     log('BUILD LIB.CSS AND LIB.JS FROM BOWER FILES');
 
     var jsFilter = filter('**/*.js'),

@@ -6,18 +6,10 @@ var express = require('express'),
     passport = require('passport');
 
 module.exports = function(app, config, env) {
-    switch(env) {
-        case 'build':
-            console.log('why was i hit?');
-            app.use(express.static('./build'));
-            break;
-        default:
-            console.log('*** DEV ***');
-            app.set('views', config.rootPath + '/src');
-    }
-    app.engine('html', require('ejs').renderFile);
-    app.set('view engine', 'html');
 
+    app.set('views', config.rootPath + 'server/views');
+
+    app.set('view engine', 'jade');
     app.use(logger('dev'));
     app.use(cookieParser());
     app.use(bodyParser.urlencoded({extended: true}));
@@ -25,16 +17,15 @@ module.exports = function(app, config, env) {
     app.use(session({secret: 'mean seed unicorns', resave: false, saveUninitialized: false}));
     app.use(passport.initialize());
     app.use(passport.session());
+    app.use(express.static(config.rootPath + '/server/favicon/'));
 
     switch(env) {
         case 'build':
             console.log('*** BUILD ***');
-            app.set('views', './build');
-            app.use(express.static('./build/'));
+            app.use(express.static(config.rootPath + '/build/'));
             break;
         default:
             console.log('*** DEV ***');
-            app.set('views', './src/');
             app.use(express.static(config.rootPath + '/src/'));
             app.use(express.static(config.rootPath + '/bower_components/'));
             break;

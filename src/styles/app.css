@@ -1,19 +1,13 @@
-/* Branding */
-/* Image Nmaes */
-.panel-info {
-  background-color: #5BC0DE; }
+/* BRANDING COLORS */
+/* IMAGE PATHS */
 
-.panel-success {
-  background-color: #5CB85C; }
+/* BRANDING COLORS */
+/* IMAGE PATHS */
+.md-sidenav-left {
+  background-color: #3793BB; }
 
-.panel-warning {
-  background-color: #F0AD4E; }
-
-.panel-danger {
-  background-color: #D9534F; }
-
-sidebar-left {
-  background-color: aquamarine; }
+md-toolbar {
+  background-color: orange; }
 
 h1 {
-  color: yellow; }
+  text-transform: uppercase; }

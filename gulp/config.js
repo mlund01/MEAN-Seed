@@ -2,8 +2,9 @@
     'use strict';
 
     var build = './build/',
-        index = './src/index.html',
+        index = 'index.jade',
         source = './src/',
+        server = './server/',
         root = './';
 
     module.exports = {
@@ -28,7 +29,18 @@
             source + '**/*.scss'
         ],
         build: build,
-        index: index,
+        bower: 'bower_components',
+        css: source + 'styles/app.css',
+        index: server + 'views/' + index,
+        injectionSites: [
+            server + 'includes/scripts.jade',
+            server + 'includes/stylesheets.jade'
+        ],
+        js: [
+            source + '**/*.module.js',
+            source + '**/*.js',
+            '!' + source + '**/*.test.js'
+        ],
         packages: [
             './package.json',
             './bower.json'
@@ -37,9 +49,10 @@
             browsers: ['last 2 versions']
         },
         src: source,
+        server: server,
         templates: [
             source + '**/*.jade',
-            '!' + index
+            '!' + server + 'views/' + index
         ],
         root: root
     };

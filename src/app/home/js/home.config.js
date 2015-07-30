@@ -6,7 +6,7 @@
             url: '/home',
             views: {
                 '': {
-                    templateUrl: 'app/home/templates/home.html'
+                    templateUrl: '/partials/home/templates/home'
                 }
             }
         });
